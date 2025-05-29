@@ -6,7 +6,7 @@ import plotly.express as px
 st.set_page_config(page_title="COVID-19 Case (PH)", layout="wide")
 
 # ✅ Load the data
-df = pd.read_csv("covid/covid19_case.csv")
+df = pd.read_csv("covid19_case.csv")
 df["date_announced"] = pd.to_datetime(df["date_announced"], errors="coerce")
 df = df.dropna(subset=["region", "province", "status", "date_announced"])
 
